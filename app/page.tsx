@@ -14,8 +14,9 @@ import { Label } from "@/components/ui/label"
 import { ThemeToggle } from "@/components/theme-toggle"
 import { useState } from "react"
 import { useRouter } from "next/navigation"
+import Link from "next/link"
 
-export function LoginForm({
+function LoginForm({
   className,
   ...props
 }: React.ComponentProps<"div">) {
@@ -111,9 +112,9 @@ export function LoginForm({
             </div>
             <div className="mt-4 text-center text-sm">
               Don't have an account?{" "}
-              <a href="/signup" className="underline underline-offset-4">
+              <Link href="/signup" className="underline underline-offset-4">
                 Sign up
-              </a>
+              </Link>
             </div>
           </form>
         </CardContent>
